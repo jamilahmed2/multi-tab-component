@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './App.css'
+import DataTable from "./components/DataTable";
 
-function App() {
+const data = [
+  {
+    id: 1,
+    name: "Student-1",
+    description: "Detail of student 1 .",
+    date: "03/11/2023",
+    amount: "$100",
+  },
+  {
+    id: 2,
+    name: "Student-2",
+    description: "Detail of student 2.",
+    date: "03/11/2023",
+    amount: "$200",
+  },
+  {
+    id: 3,
+    name: "Student-3",
+    description: "Detail of student 3.",
+    date: "03/11/2023",
+    amount: "$300",
+  },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <DataTable data={data} />
+    </>
   );
-}
+};
 
 export default App;
